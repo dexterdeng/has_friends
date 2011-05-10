@@ -58,7 +58,7 @@ module SimplesIdeias
       end
 
       def friendship_for(friend)
-        friendships.first :conditions => {:friend_id => friend.id}
+        friendships.first :conditions => {:friend_id => friend.id}, :include => :user
       end
 
       def is?(friend)
