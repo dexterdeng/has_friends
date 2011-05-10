@@ -18,6 +18,7 @@ Then generate a migration with `script/generate migration create_friendships` an
 	    create_table :friendships do |t|
 	      t.references :user, :friend
 	      t.datetime :requested_at, :accepted_at, :null => true, :default => nil
+              t.string :msg,  :limit => 1024
 	      t.string :status
 	    end
 
